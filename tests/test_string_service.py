@@ -1,4 +1,4 @@
-from string_service import to_uppercase
+from services.string_service import to_uppercase
 
 
 def test_uppercase_with_lowercased_str():
