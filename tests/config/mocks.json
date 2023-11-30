@@ -21,6 +21,36 @@
             "lastname": "Brown"
           },
           "name": "Inferno"
+        },
+        {
+          "id": "23acd43b-51a5-45c0-80f5-e16914bf32b7",
+          "author": {
+            "firstname": "Dan",
+            "lastname": "Brown"
+          },
+          "name": "Origines"
+        }
+      ]
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/users"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": [
+        {
+          "id": 1,
+          "email": "lolo@gmail.com"
+        },
+        {
+          "id": 2,
+          "email": "lala@gmail.com"
+        },
+        {
+          "id": 3,
+          "email": "lili@gmail.com"
         }
       ]
     }
