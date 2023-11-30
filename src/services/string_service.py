@@ -1,8 +1,7 @@
-
-
 def to_uppercase(value: str) -> str:
     if not value:
         return value
+
 
     if not isinstance(value, str):
         return value
@@ -41,3 +40,4 @@ def truncate(value: str, n_char: int) -> str:
         return value
 
     return value[:n_char] + '...'
+
