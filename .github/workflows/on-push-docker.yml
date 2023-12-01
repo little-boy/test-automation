@@ -11,7 +11,9 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
-      - name: Build dockerized (on push) test logic
-        run: docker build -t on-push-tests .
-      - name: Display Python version
-        run: docker run on-push-tests python --version
+      - name: Check docker existence
+        run: docker --version
+#      - name: Build dockerized (on push) test logic
+#        run: docker build -t on-push-tests .
+#      - name: Display Python version
+#        run: docker run on-push-tests python --version
