@@ -14,6 +14,6 @@ jobs:
       - name: Check docker existence
         run: docker --version
       - name: Build Docker image
-        run: docker build -t on-push-tests .
+        run: docker build -t pytest-example .
       - name: Trigger tests
-        run: docker run on-push-tests pytest
+        run: docker run pytest-example pytest
