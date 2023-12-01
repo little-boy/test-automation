@@ -13,7 +13,7 @@ jobs:
           python-version: '3.12'
       - name: Check docker existence
         run: docker --version
-#      - name: Build dockerized (on push) test logic
-#        run: docker build -t on-push-tests .
-#      - name: Display Python version
-#        run: docker run on-push-tests python --version
+      - name: Build Docker image
+        run: docker build -t on-push-tests .
+      - name: Trigger tests
+        run: docker run on-push-tests pytest
