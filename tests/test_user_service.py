@@ -1,18 +1,17 @@
-import collections
 # https://docs.python.org/3/library/typing.html#the-any-type
 from typing import Any
 import numpy as n
 
-
-
 from src.services.user_fetcher_service import UserFetcherService
 from src.services.user_service import UserService
+
 
 def is_equal_unordered(value_a: [Any], value_b: [Any]):
     narr1 = n.array([value_a])
     narr2 = n.array([value_b])
 
     return (narr1 == narr2).all()
+
 
 def test_list_user_no_user(monkeypatch):
     def mock_get_users(*args):
@@ -56,7 +55,6 @@ def test_list_user_multiple_users(monkeypatch):
             'email': 'lili@gmail.com'
         }
     ])
-
 
 
 def test_list_user_multiple_users_with_lowercase_check(monkeypatch):
