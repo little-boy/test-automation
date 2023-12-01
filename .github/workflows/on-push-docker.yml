@@ -14,4 +14,4 @@ jobs:
       - name: Build dockerized (on push) test logic
         run: docker build -t on-push-tests .
       - name: Display Python version
-        run: docker run -it on-push-tests python --version
+        run: docker run on-push-tests python --version
