@@ -11,3 +11,5 @@ services:
       - type: bind
         source: ./tests/config
         target: /config
+  test:
+    build: .
