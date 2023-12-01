@@ -11,5 +11,5 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
-      - name: Docker ps
-        run: docker ps
+      - name: Execute Dockerized (on push) test logic
+        run: docker run -it $(docker build -q .)
