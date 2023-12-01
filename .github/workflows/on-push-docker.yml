@@ -17,3 +17,5 @@ jobs:
         run: docker build -t pytest-example .
       - name: Trigger tests
         run: docker run pytest-example pytest
+      - name: Lint
+        run: docker run pytest-example ruff check .
