@@ -1,0 +1,21 @@
+name: Commit workflow
+run-name: Executing every commit required actions (tests, static analysis...) 🚀
+on: [push]
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        # This is the version of the action for setting up Python, not the Python version.
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+      - name: Check docker existence
+        run: docker --version
+      - name: Build Docker image
+        run: docker build -t pytest-example .
+      - name: Trigger tests
+        run: docker run pytest-example pytest
+      - name: Lint
+        run: docker run pytest-example ruff check .
