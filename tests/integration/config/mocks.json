@@ -1,6 +1,14 @@
 [
   {
     "httpRequest": {
+      "path": "/"
+    },
+    "httpResponse": {
+      "statusCode": 204
+    }
+  },
+  {
+    "httpRequest": {
       "path": "/books"
     },
     "httpResponse": {
@@ -34,15 +42,15 @@
       "body": [
         {
           "id": 1,
-          "email": "lolo@gmail.com"
+          "email": "john.doe@gmail.com"
         },
         {
           "id": 2,
-          "email": "lala@gmail.com"
+          "email": "jane.doe@gmail.com"
         },
         {
           "id": 3,
-          "email": "lili@gmail.com"
+          "email": "Johnny.doe@gmail.com"
         }
       ]
     }

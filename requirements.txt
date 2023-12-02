@@ -5,3 +5,4 @@ ruff
 numpy
 types-requests
 mypy
+python-dotenv
