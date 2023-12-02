@@ -6,6 +6,7 @@ on:
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
+    environment: test
     steps:
       - uses: actions/checkout@v4
       - name: Audit URLs using Lighthouse
