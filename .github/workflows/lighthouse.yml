@@ -2,7 +2,7 @@ name: Lighthouse
 run-name: Executing audit about performance, accessibility, best practices, SEO...
 on:
   schedule:
-    - cron: "*/2 * * * *"
+    - cron: "0 9 */1 * *"
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
