@@ -24,4 +24,4 @@ jobs:
         uses: notify-events/github-action@main
         with:
           token: ${{ secrets.NE_CHANNEL_TOKEN }}
-          text: Lighthouse report available !
+          text: Lighthouse report available !!
