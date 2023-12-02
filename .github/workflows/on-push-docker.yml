@@ -20,8 +20,3 @@ jobs:
       # Execute unit tests in the end
       - name: Execute unit tests
         run: docker run test-automation pytest
-      - name: send custom message
-        uses: notify-events/github-action@main
-        with:
-          token: ${{ secrets.NE_CHANNEL_TOKEN }}
-          text: Lighthouse report available !!

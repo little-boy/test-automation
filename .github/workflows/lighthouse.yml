@@ -16,7 +16,7 @@ jobs:
           budgetPath: ./.github/workflows/lighthouse/budget.json # test performance budgets
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
-      - name: send custom message
+      - name: Success notification
         uses: notify-events/github-action@main
         with:
           token: ${{ secrets.NE_CHANNEL_TOKEN }}
