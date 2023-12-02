@@ -1,7 +1,10 @@
 from dotenv import dotenv_values
 import os
 
-env = os.environ['ENV']
+env = 'local'
+
+if 'ENV' in os.environ:
+    env = os.environ['ENV']
 
 if env == 'test':
     main_config: dict[str, str | None] = {
