@@ -9,7 +9,7 @@ services:
       MOCKSERVER_INITIALIZATION_JSON_PATH: /config/mocks.json
     volumes:
       - type: bind
-        source: ./tests/config
+        source: ./tests/integration/config
         target: /config
   test:
     build: .
