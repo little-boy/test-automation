@@ -1,6 +1,6 @@
 version: "2.4"
 services:
-  mockServer:
+  api:
     image: mockserver/mockserver:5.14.0
     ports:
       - 1080:1080
@@ -9,7 +9,14 @@ services:
       MOCKSERVER_INITIALIZATION_JSON_PATH: /config/mocks.json
     volumes:
       - type: bind
-        source: ./tests/config
+        source: ./tests/integration/config
         target: /config
   test:
+    depends_on: [api]
     build: .
+    command: |
+      /usr/src/wait-for-it.sh api:1080 -- python -m pytest tests/integration
+    environment:
+      ENV: test
+      USER_API_URL: http://api:1080
+      BOOK_API_URL: http://api:1080

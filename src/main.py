@@ -1,5 +1,5 @@
-from services.user_fetcher_service import UserFetcherService
-from services.user_service import UserService
+from src.services.user_fetcher_service import UserFetcherService
+from src.services.user_service import UserService
 
 # book_fetcher_service = BookFetcherService()
 # book_service = BookService(book_fetcher_service=book_fetcher_service)

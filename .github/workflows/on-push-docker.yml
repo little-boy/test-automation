@@ -18,4 +18,6 @@ jobs:
         run: docker run test-automation mypy src
       # Execute unit tests in the end
       - name: Execute unit tests
-        run: docker run test-automation pytest
+        run: docker run test-automation pytest tests/unit
+      - name: Execute integration tests
+        run: docker-compose up --build --exit-code-from=test
